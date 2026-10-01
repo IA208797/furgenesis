@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Furgénesis | Del yo al avatar</title>
+    <meta
+      name="description"
+      content="Proyecto de investigación sobre el desarrollo morfológico y texturizado de un dragón antropomórfico."
+    />
+    <link rel="icon" href="images/IsotipoFurgenesis.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Barra de Navegación -->
+    <nav id="navbar" class="navbar">
+      <div class="nav-logo-container">
+        <img
+          src="images/IsotipoFurgenesis.svg"
+          alt="Logo de Furgénesis"
+          class="nav-logo"
+        />
+        <div class="nav-brand space-paw">Furgénesis</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">Inicio</a></li>
+        <li><a href="#overview" class="nav-link">Visión General</a></li>
+        <li><a href="#preproduction" class="nav-link">Pre-Producción</a></li>
+        <li><a href="#construction" class="nav-link">Producción</a></li>
+        <li><a href="#results" class="nav-link">Modelo 3D</a></li>
+        <li><a href="#conclusions" class="nav-link">Conclusiones</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Sección 1. Portada -->
+      <section id="hero" class="hero-section">
+        <!-- Fondo Multimedia. Video en bucle con imagen poster de respaldo -->
+        <div class="hero-media-container">
+          <video
+            class="hero-video"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster="images/hero.png"
+          >
+            <source src="videos/video_ejemplo.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content container">
+          <span class="hero-badge">Construcción de una fursona</span>
+          <h1 class="hero-title">FURGÉNESIS</h1>
+          <p class="hero-subtitle">
+            ¿Te has preguntado alguna vez cómo plasmar tu personalidad y valores
+            en una fursona? En esta página podrás explorar el proceso de
+            conceptualización, modelado y texturizado de un dragón
+            antropomórfico, desde la idea inicial hasta el render final.
+          </p>
+          <a
+            href="#overview"
+            class="scroll-indicator"
+            aria-label="Comenzar a explorar"
+          >
+            <span>Comenzar a explorar</span>
+            <div class="arrow-down"></div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Sección 2. Identidad y trasfondo -->
+      <section id="overview" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">¿Qué te hace único?</span>
+            <h2>El corazón de tu fursona</h2>
+            <p class="section-lead">
+              Antes de abrir el programa de 3D o agarrar el lápiz, toca la parte más creativa y divertida: descubrir quién es tu fursona. En este viaje te acompañará el dragón que diseñamos para este proyecto, pero la verdadera pregunta aquí es: <b>¿quién vas a ser tú?</b>
+            </p>
+          </div>
+
+          <div class="overview-grid">
+            <article class="overview-card">
+              <h3>Tu concepto identitario</h3>
+              <p>
+                La especie que elijas será mucho más que un aspecto visual; será el lienzo donde proyectes tu personalidad. Por ejemplo, elegí que mi fursona fuera un dragón no solo porque son increíbles, sino porque conectan con mi forma de ser: compartimos el amor por las buenas siestas, disfrutar de una rica comida con té, y ese instinto protector con mis amigos y mi espacio. ¡Incluso convertí la clásica "cueva de tesoros" de los dragones en mi gusto real por coleccionar objetos que me traen bonitos recuerdos!
+              </p>
+              <p>
+                Tu elección será igual de especial e importante. La especie que selecciones le contará al mundo qué rasgos tuyos quieres destacar, exagerar o simplemente celebrar.
+              </p>
+            </article>
+            <article class="overview-card">
+              <h3>Olvida la presión de ser "100% original"</h3>
+              <p>
+                A veces, cuando empezamos a crear, nos asalta una sensación frustrante: “Mi idea es muy simple”, “Seguro alguien ya hizo un lobo con estos colores” o “No soy lo suficientemente creativo”. Queremos decirte un secreto que nos ha servido mucho en nuestro propio proceso: nada surge de la nada. La creatividad no se trata de inventar un color nuevo o una especie que nadie haya visto jamás; se trata de cómo combinas las cosas que amas. Un perro golden retriever con tu chamarra favorita, tu cicatriz en la ceja y tu amor por la música ochentera ya es un diseño único, porque tiene un pedacito de tu historia.
+              </p>
+              <p>
+                No intentes diseñar algo pensando en "qué le gustará a los demás" o "qué se verá más popular". Si a ti te hace sonreír cuando lo ves, entonces el diseño es justo lo que buscabas.
+              </p>
+            </article>
+          </div>
+
+          <div class="specs-bar">
+            <div class="spec-block">
+              <span class="spec-title">Especie</span>
+              <span class="spec-detail"
+                >¿Con qué animal te identificas más? Puedes elegir tu favorito, mezclar un par de ellos o inventar una criatura completamente nueva.</span
+              >
+            </div>
+            <div class="spec-block">
+              <span class="spec-title">Patrones y Marcas</span>
+              <span class="spec-detail"
+                >¿Tendrá manchas, rayas, pecas o cicatrices geniales? Estos detalles son como las huellas dactilares de tu personaje, lo harán único.</span
+              >
+            </div>
+            <div class="spec-block">
+              <span class="spec-title">Colores</span>
+              <span class="spec-detail"
+                >Piensa en lo que quieres transmitir. ¿Colores vibrantes y llenos de energía, o tonos suaves y relajados? Selecciona tu paleta ideal.</span
+              >
+            </div>
+            <div class="spec-block">
+              <span class="spec-title">Estilo y Ropa</span>
+              <span class="spec-detail"
+                >¿Qué se pondría en un día cualquiera? Ponle esa prenda que amas o ese estilo que siempre quisiste probar. ¡Muestra quién eres a través de su vestimenta!</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 3. Pre-Producción -->
+      <section id="preproduction" class="section bg-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Investigación Visual</span>
+            <h2>Pre-Producción y Conceptualización</h2>
+            <p class="section-lead">
+              Una vez que tenemos clara el "alma" de la fursona, empieza la parte más emocionante: ponerle un rostro. En esta etapa de pre-producción, nosotros dejamos volar la imaginación recolectando referencias visuales y armando moodboards antes de comenzar a bocetar.
+              Aquí definimos nuestro "hoja de referencia", una guía visual que nos asegura que la estructura base funcionará perfecto cuando llegue la hora de modelar y mover al personaje.
+            </p>
+          </div>
+
+          <!-- Subsección A: Moodboard y Bocetos -->
+          <div class="preprod-gallery">
+            <div class="gallery-column">
+              <!-- Referencias -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/moodboard.jpg"
+                  alt="Referencias de cada parte del cuerpo y estilo visual"
+                />
+                <div class="item-overlay">
+                  <span>Moodboard completo</span>
+                </div>
+              </div>
+              <!-- Referencias -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/moodboard_1.png"
+                  alt="Referencias de cada parte del cuerpo y estilo visual"
+                />
+                <div class="item-overlay">
+                  <span>Moodboard: Referencias y manos</span>
+                </div>
+              </div>
+              <!-- Referencias -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/moodboard_2.png"
+                  alt="Referencias de cada parte del cuerpo y estilo visual"
+                />
+                <div class="item-overlay">
+                  <span>Moodboard: Ropa, accesorios y paleta de colores</span>
+                </div>
+              </div>
+              <!-- Anatomía -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/image_23.png"
+                  alt="Bocetos"
+                />
+                <div class="item-overlay">
+                  <span>Bocetos de la anatomía</span>
+                </div>
+              </div>
+              <!-- Mapa de proporciones y vista trasera -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/image_22.jpg"
+                  alt="Mapa de proporciones y vista trasera"
+                />
+                <div class="item-overlay">
+                  <span>Mapa de proporciones y vista trasera</span>
+                </div>
+              </div>
+              <!-- Hoja de referencias -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/image_7.jpg"
+                  alt="Hoja de referencias"
+                />
+                <div class="item-overlay">
+                  <span>Hoja de referencias</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-column">
+              <!-- Referencias -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/moodboard_3.png"
+                  alt="Referencias de cada parte del cuerpo y estilo visual"
+                />
+                <div class="item-overlay">
+                  <span>Moodboard: Piernas y referencias 3D</span>
+                </div>
+              </div>
+              <!-- Referencias -->
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="images/moodboard_4.png"
+                  alt="Referencias de cada parte del cuerpo y estilo visual"
+                />
+                <div class="item-overlay">
+                  <span>Moodboard: Cabeza y estilo</span>
+                </div>
+              </div>
+              <!-- Proporciones -->
+              <div
+                class="gallery-item featured-item"
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/image_17.jpg"
+                  alt="Bocetos de diferentes proporciones"
+                />
+                <div class="item-overlay">
+                  <span>Diferentes proporciones</span>
+                </div>
+              </div>
+            
+              <!-- Entintado final -->
+              <div
+                class="gallery-item "
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/image_16.jpg"
+                  alt="Entintado final y marca"
+                />
+                <div class="item-overlay">
+                  <span>Entintado final y marca</span>
+                </div>
+              </div>
+
+              <!-- Vista frontal y trasera -->
+              <div
+                class="gallery-item "
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/image_8.jpg"
+                  alt="Color en vista frontal y trasera"
+                />
+                <div class="item-overlay">
+                  <span>Color en vista frontal y trasera</span>
+                </div>
+              </div>
+
+              <!-- Pose T -->
+              <div
+                class="gallery-item "
+                onclick="openLightbox(this)"
+              >
+                <img
+                  src="images/image_6.jpg"
+                  alt="Pose T con color y marca"
+                />
+                <div class="item-overlay">
+                  <span>Pose T con color y marca</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subsección B: Hoja de referencia -->
+          <div class="proportion-showcase">
+            <div class="proportion-text">
+              <h3>La hoja de referencia</h3>
+              <p>
+                Antes de dar el gran salto al 3D, preparamos nuestra herramienta más importante: la hoja de referencia (también muy conocida en la comunidad como ref sheet). Puedes verla como el plano de construcción de tu personaje.
+              </p>
+              <br/>
+              <p>
+                Esta hoja es nuestra guía definitiva. Al tener dibujado a nuestro personaje desde diferentes ángulos (como de frente, de perfil y de espaldas), evitamos tener que adivinar las proporciones o dónde iba aquella mancha específica mientras estamos modelando. Es, literalmente, el mapa que nos permite trasladar cada detalle de la fursona al espacio 3D con total precisión y sin perder su esencia.
+              </p>
+            </div>
+            <div class="proportion-image" onclick="openLightbox(this)">
+              <img
+                src="images/image_7.jpg"
+                alt="Hoja de referencia completa del personaje"
+              />
+              <div class="zoom-hint">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <line x1="11" y1="8" x2="11" y2="14" />
+                  <line x1="8" y1="11" x2="14" y2="11" />
+                </svg>
+                Ampliar hoja de referencia
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenedor del Lightbox (Oculto por defecto) -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <span class="lightbox-close">&times;</span>
+          <img
+            id="lightbox-img"
+            class="lightbox-content"
+            src=""
+            alt="Imagen ampliada"
+          />
+          <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+      </section>
+
+      <!-- 4. Proceso de Construcción -->
+      <section id="construction" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">Manos al vertice</span>
+            <h2>Producción 3D</h2>
+            <p class="section-lead">
+              Con nuestra hoja de referencia lista y a la mano, llegó el momento de la verdad: dar el gran salto a la tercera dimensión. Aquí es donde la magia ocurre y empezamos a modelar y darle color a nuestro personaje.
+            </p>
+          </div>
+
+          <!-- Pasos -->
+          <div class="process-steps">
+            <!-- Paso 1 -->
+            <div class="step-row">
+              <div class="step-text">
+                <div class="step-number">01</div>
+                <h3>Blocking</h3>
+                <p>
+                  Empezamos con el Blocking. Imagina que estás armando la estructura de un muñeco con bloques muy simples. Primero hacemos el torso, eliminando las caras (los polígonos) exactas donde irán los brazos y las piernas para dejarles un "hueco". Luego, creamos las extremidades y la cabeza por separado. Finalmente, unimos todas estas piezas al cuerpo principal como si estuviéramos fusionando piezas de plastilina.
+                </p>
+              </div>
+              <div class="step-media">
+                <img
+                  src="images/image_33.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- Paso 2 -->
+            <div class="step-row reverse">
+              <div class="step-text">
+                <div class="step-number">02</div>
+                <h3>Topología</h3>
+                <p>
+                  Una vez que tenemos la forma completa de nuestro personaje, toca hacer "correcciones de topología". Suena como un término de ingeniería, pero básicamente significa organizar la malla de nuestro modelo. Acomodamos los polígonos para que el personaje quede limpio, se vea bien y, lo más importante, pueda doblar sus codos, rodillas y cola más adelante sin que la geometría colapse.
+                </p>
+              </div>
+              <div class="step-media">
+                <img
+                  src="images/image_34.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- Paso 3 -->
+            <div class="step-row">
+              <div class="step-text">
+                <div class="step-number">03</div>
+                <h3>Rigging</h3>
+                <p>
+                  Para que nuestra fursona deje de ser una estatua y pueda posar o animarse, necesitamos ponerle un esqueleto digital por dentro. A este proceso le llamamos Rigging (nosotros usamos herramientas como Rigify). Después de colocar los huesos, hacemos algo llamado "corrección de pesos", que es simplemente enseñarle al programa qué hueso debe mover qué parte del cuerpo. De esta forma evitamos que al levantar un brazo se le deforme una oreja.
+                </p>
+              </div>
+              <div class="step-media">
+                <img
+                  src="images/image_32.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- Paso 4 -->
+            <div class="step-row reverse">
+              <div class="step-text">
+                <div class="step-number">04</div>
+                <h3>Mapas UV</h3>
+                <p>
+                  Antes de poder darle color, tenemos que hacer nuestros Mapas UV. En este paso, hacemos "cortes" estratégicos para desdoblar nuestro modelo y aplanarlo sobre una mesa virtual. De esta manera, el software sabrá exactamente en qué parte del cuerpo va cada pincelada que demos.
+                </p>
+              </div>
+              <div class="step-media">
+                <img
+                  src="images/image_36.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <!-- Paso 5 -->
+            <div class="step-row">
+              <div class="step-text">
+                <div class="step-number">05</div>
+                <h3>Texturas</h3>
+                <p>
+                  Nos llevamos el modelo desdoblado a un programa de pintura digital (como Substance Painter). Teniendo a un lado nuestra hoja de referencia, aquí es donde nos relajamos y comenzamos a pintar: le damos color, textura, brillo a los ojos y vida al personaje. Es el momento en el que todos los pasos anteriores cobran sentido y nuestra fursona por fin está lista para presentarse al mundo.
+                </p>
+              </div>
+              <div class="step-media">
+                <img
+                  src="images/image_38.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Deslizador  -->
+          <div class="slider-showcase">
+            <div class="slider-info">
+              <h3>El antes y después</h3>
+              <p>
+                Mueve el deslizador de abajo de izquierda a derecha para ver la transformación.
+              </p>
+            </div>
+
+            <div class="slider-container">
+              <!-- Imagen Base-->
+              <div class="image-layer render-layer">
+                <img src="images/image_0.jpg" alt="" />
+              </div>
+
+              <!-- Imagen Sup-->
+              <div class="image-layer wireframe-layer" id="wireframe-layer">
+                <img src="images/image_1.jpg" alt="" />
+              </div>
+
+              <!-- Control Deslizante -->
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                id="slider"
+                class="slider-input"
+                aria-label="Comparar wireframe y render"
+              />
+
+              <!-- Línea divisoria -->
+              <div class="slider-line" id="slider-line">
+                <div class="slider-button">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m9 18 6-6-6-6" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- FIN DEL SLIDER -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Resultados  -->
+      <section id="results" class="section bg-alt">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">¡Conócelo en 360°!</span>
+            <h2>Modelo 3D Final</h2>
+            <p class="section-lead">
+              Después de todo el viaje, desde definir su personalidad, el bocetaje, hasta dar la última pincelada digital, por fin te presentamos a nuestro dragón terminado y listo para la acción.
+              Pero no queríamos dejarte solo con una imagen estática. Hemos preparado este visor para que puedas explorar el resultado final con tus propias manos.
+            </p>
+          </div>
+          <div class="viewer-section">
+            <model-viewer
+              src="models/IzantDracoEsqueletoTerminado.glb"
+              camera-controls
+              auto-rotate
+              rotation-per-second="10deg"
+              shadow-intensity="1"
+              environment-image="neutral"
+              exposure="1"
+              alt="Modelo 3D interactivo de la fursona"
+            >
+              <!-- Hotspot 1 -->
+              <!-- data-position usa coordenadas (X Z Y) del modelo 3D -->
+              <button
+                class="hotspot"
+                slot="hotspot-piernas"
+                data-position="2 4 1.3"
+                data-normal="0 0 1"
+              >
+                <div class="annotation">
+                  <strong>Anatomía</strong>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis cumque similique sint.
+                  </p>
+                </div>
+              </button>
+
+              <!-- Hotspot 2 -->
+              <button
+                class="hotspot"
+                slot="hotspot-textura"
+                data-position="2 17 2"
+                data-normal="0 0 1"
+              >
+                <div class="annotation">
+                  <strong>Texturizado</strong>
+                  <p>
+                    lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus corporis cumque similique sint.
+                  </p>
+                </div>
+              </button>
+
+              <!-- Hotspot 3 -->
+              <button
+                class="hotspot"
+                slot="hotspot-silueta"
+                data-position="0 13 2"
+                data-normal="0 0 1"
+              >
+                <div class="annotation">
+                  <strong>Proporciones Estilizadas</strong>
+                  <p>
+                    Exageración de la silueta para mejorar la legibilidad y el
+                    atractivo visual general del personaje.
+                  </p>
+                </div>
+              </button> 
+
+              <!-- Hotspot 4 -->
+              <button
+                class="hotspot"
+                slot="hotspot-alas"
+                data-position="0 17 -4"
+                data-normal="0 0 -1"
+              >
+                <div class="annotation">
+                  <strong>Alas</strong>
+                  <p>
+                    Exageración de la silueta para mejorar la legibilidad y el
+                    atractivo visual general del personaje.
+                  </p>
+                </div>
+              </button> 
+            </model-viewer>
+          </div>
+          <div class="container">
+            <div class="section-header">
+              <br>
+            <p class="section-lead">
+              Esperamos que acompañarnos en este recorrido te haya inspirado y quitado un poco el miedo a crear tu propia fursona. Crear a tu propio personaje toma tiempo y mucha paciencia, pero te prometemos que ver a tu fursona cobrar vida frente a ti... ¡hace que cada minuto valga la pena!
+            </p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- 6. Conclusiones -->
+      <section id="conclusions" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-subtitle">El final del recorrido (y el inicio del tuyo)</span>
+            <h2>Nuestras últimas recomendaciones</h2>
+            <div class="section-lead">
+              <p>
+                Llegar hasta aquí es solo el primer paso. Si después de ver nuestro proceso tienes ganas de empezar a crear (o rediseñar) a tu propia fursona, queremos dejarte tres consejos que a nosotros nos hubieran servido mucho al empezar:
+              </p>
+            </div>
+          </div>
+
+          <div class="conclusions-content">
+            <!-- Tarjetas -->
+            <div class="findings-grid">
+              <div class="finding-card">
+                <h4>Date tu tiempo (y ten paciencia)</h4>
+                <p>
+                  Crear a tu personaje desde cero no es una carrera de velocidad. Tu fursona es un reflejo de ti, así que date permiso de explorar todas las ideas que necesites sin prisas. A nosotros nos tomó varias tazas de té, muchas pláticas y bastantes bocetos descartados llegar al resultado final. No te presiones, ¡disfruta el camino!
+                </p>
+              </div>
+              <div class="finding-card">
+                <h4>Juega, equivócate y experimenta</h4>
+                <p>
+                  No tengas miedo de probar combinaciones que parezcan locas al principio. A veces, los detalles más únicos y sorprendentes nacen de un "error" o de mezclar dos cosas que parecían no encajar. Y lo más importante: recuerda que tu personaje no está esculpido en piedra. Si tú creces, cambias de gustos o descubres una nueva pasión, ¡tu fursona puede evolucionar contigo! No te sientas atado a tu primer diseño.
+                </p>
+              </div>
+              <div class="finding-card">
+                <h4>Alimenta tu inspiración</h4>
+                <p>
+                  Colecciona todo lo que te llame la atención. Arma tus propios tableros de referencias con fotografías de la naturaleza, la ropa de tus personajes favoritos, arte conceptual, mitología... ¡todo sirve! Las referencias son como los ingredientes en una cocina: son una excelente guía, pero al final, tu creatividad es la receta secreta que hará que tu diseño sea verdaderamente irrepetible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-brand">FURGÉNESIS</div>
+            <p class="footer-credits">
+              Proyecto desarrollado por
+              <strong>Ismael Díaz</strong> y <strong>Kevin Richart</strong>.<br />
+              Licenciatura en Diseño Digital de Medios Interactivos.
+            </p>
+            <div class="footer-links">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook</a
+              >
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+              <a
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Twitter</a
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="interacciones.js"></script>
+  </body>
+</html>

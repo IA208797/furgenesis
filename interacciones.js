@@ -118,3 +118,36 @@ document.addEventListener('keydown', function(event) {
     closeLightbox();
   }
 });
+
+// =========================================
+// MENÚ HAMBURGUESA
+// =========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  const navItems = document.querySelectorAll('.nav-link');
+
+  // Alternar el menú al hacer clic en la hamburguesa
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      
+      // Bloquear o desbloquear el scroll del fondo cuando el menú está abierto
+      if (navLinks.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
+
+  // Cerrar el menú automáticamente cuando se hace clic en un enlace
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navLinks.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Restaurar el scroll
+    });
+  });
+});

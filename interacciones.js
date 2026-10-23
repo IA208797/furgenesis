@@ -151,3 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// =========================================
+// CURATOR.IO 
+// =========================================
+/* curator-feed-default-feed-layout */
+(function(){
+var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+i.src="https://cdn.curator.io/published/1dd22dd6-cbb0-4739-8510-9abe3e45da2a.js";
+e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+})();
